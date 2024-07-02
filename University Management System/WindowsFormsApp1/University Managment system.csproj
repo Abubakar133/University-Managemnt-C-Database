@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11DC006A-D365-4632-B79E-868F25FE62F6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Treetog-Junior-Folder-documents.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.6.1\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add instructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add instructor.Designer.cs">
+      <DependentUpon>add instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_User.Designer.cs">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Students.Designer.cs">
+      <DependentUpon>Admin Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Transaction.Designer.cs">
+      <DependentUpon>Admin Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin University.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin University.Designer.cs">
+      <DependentUpon>Admin University.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Course.Designer.cs">
+      <DependentUpon>Admin_Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_instructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_instructor.Designer.cs">
+      <DependentUpon>admin_instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="course add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="course add.Designer.cs">
+      <DependentUpon>course add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="delete course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete course.Designer.cs">
+      <DependentUpon>delete course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete instructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete instructor.Designer.cs">
+      <DependentUpon>delete instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_student.Designer.cs">
+      <DependentUpon>delete_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_User.Designer.cs">
+      <DependentUpon>Delete_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Erds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Erds.Designer.cs">
+      <DependentUpon>Erds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="flexportal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="flexportal.Designer.cs">
+      <DependentUpon>flexportal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Student.Designer.cs">
+      <DependentUpon>Add_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="instructor Flex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="instructor Flex.Designer.cs">
+      <DependentUpon>instructor Flex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Instructor info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructor info.Designer.cs">
+      <DependentUpon>Instructor info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="instructor Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="instructor Login.Designer.cs">
+      <DependentUpon>instructor Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register Course.Designer.cs">
+      <DependentUpon>Register Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="section info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="section info.Designer.cs">
+      <DependentUpon>section info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Login.Designer.cs">
+      <DependentUpon>Student Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_info.Designer.cs">
+      <DependentUpon>student_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuperPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuperPanel.Designer.cs">
+      <DependentUpon>SuperPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuperPanelDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuperPanelDashboard.Designer.cs">
+      <DependentUpon>SuperPanelDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTable.Designer.cs">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uni Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uni Info.Designer.cs">
+      <DependentUpon>Uni Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update instructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update instructor.Designer.cs">
+      <DependentUpon>update instructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateTimetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateTimetable.Designer.cs">
+      <DependentUpon>updateTimetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_student.Designer.cs">
+      <DependentUpon>update_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_User.Designer.cs">
+      <DependentUpon>Update_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.Designer.cs">
+      <DependentUpon>UserDashboard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add instructor.resx">
+      <DependentUpon>add instructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_User.resx">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Students.resx">
+      <DependentUpon>Admin Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Transaction.resx">
+      <DependentUpon>Admin Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin University.resx">
+      <DependentUpon>Admin University.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Course.resx">
+      <DependentUpon>Admin_Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_instructor.resx">
+      <DependentUpon>admin_instructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="course add.resx">
+      <DependentUpon>course add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete course.resx">
+      <DependentUpon>delete course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete instructor.resx">
+      <DependentUpon>delete instructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_student.resx">
+      <DependentUpon>delete_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_User.resx">
+      <DependentUpon>Delete_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Erds.resx">
+      <DependentUpon>Erds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="flexportal.resx">
+      <DependentUpon>flexportal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Student.resx">
+      <DependentUpon>Add_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="instructor Flex.resx">
+      <DependentUpon>instructor Flex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructor info.resx">
+      <DependentUpon>Instructor info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="instructor Login.resx">
+      <DependentUpon>instructor Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register Course.resx">
+      <DependentUpon>Register Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="section info.resx">
+      <DependentUpon>section info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Login.resx">
+      <DependentUpon>Student Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student_info.resx">
+      <DependentUpon>student_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuperPanel.resx">
+      <DependentUpon>SuperPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SuperPanelDashboard.resx">
+      <DependentUpon>SuperPanelDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeTable.resx">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uni Info.resx">
+      <DependentUpon>Uni Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update instructor.resx">
+      <DependentUpon>update instructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateTimetable.resx">
+      <DependentUpon>updateTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_student.resx">
+      <DependentUpon>update_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_User.resx">
+      <DependentUpon>Update_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDashboard.resx">
+      <DependentUpon>UserDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_5750_1-min-760x400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\National_University_of_Computer_and_Emerging_Sciences_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questionmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Treetog-Junior-Folder-documents.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
